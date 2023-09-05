@@ -42,7 +42,10 @@ cargo install --path . --root ${PREFIX} --verbose --locked
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
 # strip debug symbols
-"$STRIP" "$PREFIX/bin/cargo-c"
+"$STRIP" "$PREFIX/bin/cargo-cinstall"
+"$STRIP" "$PREFIX/bin/cargo-cbuild"
+"$STRIP" "$PREFIX/bin/cargo-ctest"
+"$STRIP" "$PREFIX/bin/cargo-capi"
 
 # remove extra build file
 rm -f "${PREFIX}/.crates.toml"
