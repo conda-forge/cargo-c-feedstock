@@ -39,6 +39,8 @@ export RUSTFLAGS=$CARGO_BUILD_RUSTFLAGS
 # build statically linked binary with Rust
 cargo install --verbose --locked --root "$PREFIX" --path .
 
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+
 # strip debug symbols
 "$STRIP" "$PREFIX/bin/cargo-c"
 
