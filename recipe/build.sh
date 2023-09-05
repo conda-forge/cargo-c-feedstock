@@ -37,7 +37,7 @@ echo $CONDA_RUST_HOST, $CONDA_RUST_TARGET
 export RUSTFLAGS=$CARGO_BUILD_RUSTFLAGS
 
 # build statically linked binary with Rust
-cargo install --verbose --locked --root "$PREFIX" --path .
+cargo install --path . --root ${PREFIX} --verbose --locked 
 
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
