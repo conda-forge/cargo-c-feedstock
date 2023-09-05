@@ -1,13 +1,11 @@
-# set -ex
-
-# # Required for cross-compiling with pkg-config
-# export PKG_CONFIG_SYSROOT_DIR=$PREFIX
-# export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
-
-# # Help the linker can find zlib
-# export LIBRARY_PATH=$PREFIX/lib${LIBRARY_PATH:+:$LIBRARY_PATH}
-
 set -o xtrace -o nounset -o pipefail -o errexit
+
+# Required for cross-compiling with pkg-config
+export PKG_CONFIG_SYSROOT_DIR=$PREFIX
+export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
+
+# Help the linker can find zlib
+export LIBRARY_PATH=$PREFIX/lib${LIBRARY_PATH:+:$LIBRARY_PATH}
 
 export CARGO_HOME="$BUILD_PREFIX/cargo"
 mkdir $CARGO_HOME
