@@ -17,9 +17,9 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
-    - libcurl   # [build_platform != target_platform]
-    - openssl   # [build_platform != target_platform]
-    - zlib      # [build_platform != target_platform]
+    - libcurl
+    - openssl
+    - zlib
   host:
     - libcurl
     - openssl
