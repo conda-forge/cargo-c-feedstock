@@ -17,13 +17,13 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
-    - libcurl
-    - openssl
-    - zlib
+    - libcurl  # [not win]
+    - openssl  # [not win]
+    - zlib  # [not win]
   host:
-    - libcurl
-    - openssl
-    - zlib
+    - libcurl  # [not win]
+    - openssl  # [not win]
+    - zlib  # [not win]
 
 test:
   commands:
