@@ -19,11 +19,11 @@ requirements:
     - pkg-config
     - libcurl   # [build_platform != target_platform]
     - openssl   # [build_platform != target_platform]
-    - zlib      # [build_platform != target_platform and (not osx)]
+    - zlib      # [build_platform != target_platform]
   host:
     - libcurl
     - openssl
-    - zlib  # [not osx]
+    - zlib
 
 test:
   commands:
