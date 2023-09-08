@@ -9,7 +9,7 @@ source:
   sha256: 32f2f5c802c01c51cf93471fcf876d0cc68edbc31d22005b9f07e4549d5b98b1
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -17,10 +17,15 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
+    - libcurl  # [not win]
+    - openssl  # [not win]
+    - zlib  # [not win]
   host:
-    - libcurl
-    - openssl
-    - zlib
+    - libcurl  # [not win]
+    - openssl  # [not win]
+    - zlib  # [not win]
+  run:
+    - pkg-config  # [not win]
 
 test:
   commands:

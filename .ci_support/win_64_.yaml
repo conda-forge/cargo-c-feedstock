@@ -4,13 +4,7 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
-libcurl:
-- '8'
-openssl:
-- '3'
 rust_compiler:
 - rust
 target_platform:
 - win-64
-zlib:
-- '1.2'
