@@ -1,4 +1,4 @@
-{% set version = "0.9.24" %}
+{% set version = "0.9.26" %}
 
 package:
   name: cargo-c
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/lu-zero/cargo-c/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 32f2f5c802c01c51cf93471fcf876d0cc68edbc31d22005b9f07e4549d5b98b1
+  sha256: 6101c4f1d6b17f6b42982dd908f194493e966a91d5a3cf9c210c65dbf66683b3
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -46,12 +46,9 @@ about:
   home: https://github.com/lu-zero/cargo-c
   summary: build and install C-compatible libraries
   description: >
-    cargo applet to build and install C-ABI compatible dynamic and static
-    libraries.
+    cargo applet to build and install C-ABI compatible dynamic and static libraries.
 
-    It produces and installs a correct pkg-config file, a static library and a
-    dynamic library, and a C header to be used by any C (and C-compatible)
-    software.
+    It produces and installs a correct pkg-config file, a static library and a dynamic library, and a C header to be used by any C (and C-compatible) software.
   license: MIT
   license_file:
     - LICENSE
