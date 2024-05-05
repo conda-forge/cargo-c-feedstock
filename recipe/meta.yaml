@@ -14,7 +14,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
@@ -23,7 +23,7 @@ requirements:
     - zlib  # [not win]
   host:
     - libcurl  # [not win]
-    - libgit2 >=1.7.2,<1.8.0
+    - libgit2
     - openssl  # [not win]
     - zlib  # [not win]
   run:
