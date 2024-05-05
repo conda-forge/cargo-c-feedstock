@@ -18,8 +18,6 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
-    # libgit2 on conda-forge requires glibc >=2.14
-    - sysroot_linux-64 2.17  # [linux64]
     - libcurl  # [not win]
     - openssl  # [not win]
     - zlib  # [not win]
