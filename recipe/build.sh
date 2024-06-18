@@ -1,5 +1,7 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
+export LIBGIT2_NO_VENDOR=1
+
 # Required for cross-compiling with pkg-config
 export PKG_CONFIG_SYSROOT_DIR=$PREFIX
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
