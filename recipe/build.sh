@@ -1,6 +1,7 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
 export LIBGIT2_NO_VENDOR=1
+export TARGET_PKG_CONFIG_SYSROOT_DIR=$PREFIX
 
 # Required for cross-compiling with pkg-config
 export PKG_CONFIG_SYSROOT_DIR=$PREFIX
