@@ -1,4 +1,4 @@
-{% set version = "0.9.30" %}
+{% set version = "0.10.1" %}
 
 package:
   name: cargo-c
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/lu-zero/cargo-c/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 174cfc3a69263c3e54b95e00c4bd61b13377f7f72d4bf60aa714fd9e7ed3849c
+  sha256: 0f08ef800bd2c46968356d9445ee780085fcbb500a2e8ac3447f2e4a9981e939
 
 build:
   number: 0
@@ -14,6 +14,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
