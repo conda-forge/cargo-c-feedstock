@@ -1,5 +1,10 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
+if [[ "$build_platform" == "linux-64" ]]; then
+  # The x86 cross-compiler doesn't know about -mtune=powerX, it does know about -mcpu=powerX
+  CFLAGS=$(echo "$CFLAGS" | sed -E 's/-mtune=power[0-9]+\s*| \s*-mtune=power[0-9]+//g')
+fi
+
 # Required for cross-compiling with pkg-config
 export PKG_CONFIG_SYSROOT_DIR=$PREFIX
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
