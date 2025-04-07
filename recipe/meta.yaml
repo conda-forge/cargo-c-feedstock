@@ -25,6 +25,7 @@ requirements:
     - libcurl  # [not win]
     - openssl  # [not win]
     - zlib  # [not win]
+    - libgit2
   run:
     - pkg-config  # [not win]
 
