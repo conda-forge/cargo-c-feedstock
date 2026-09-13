@@ -18,6 +18,8 @@ libcurl:
 - '8'
 libgit2:
 - '1.9'
+libiconv:
+- '1'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
