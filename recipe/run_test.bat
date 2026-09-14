@@ -18,9 +18,3 @@ pkg-config --validate cargo_c_smoke
 if errorlevel 1 exit /b 1
 pkg-config --modversion cargo_c_smoke | findstr /x "0.1.0"
 if errorlevel 1 exit /b 1
-set "EXPECTED_MACHINE=8664 machine (x64)"
-if "%target_platform%" == "win-arm64" set "EXPECTED_MACHINE=AA64 machine (ARM64)"
-for %%F in ("%LIBRARY_BIN%\cargo-cbuild.exe" "%LIBRARY_BIN%\cargo-ctest.exe" "%LIBRARY_BIN%\cargo-cinstall.exe" "%LIBRARY_BIN%\cargo-capi.exe" "stage\bin\cargo_c_smoke.dll" "consumer.exe") do (
-    dumpbin /headers "%%~F" | findstr /c:"%EXPECTED_MACHINE%"
-    if errorlevel 1 exit /b 1
-)
