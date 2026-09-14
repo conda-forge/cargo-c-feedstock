@@ -9,7 +9,7 @@ source:
   sha256: 8054b12ae8b64259e7b63e40368406dd6b6510d5d92b658152b361c5d816a5de
 
 build:
-  number: 0
+  number: 1
   skip: true  # [ppc64le]
 
 requirements:
@@ -32,6 +32,12 @@ requirements:
     - pkg-config  # [not win]
 
 test:
+  files:
+    - smoke  # [win]
+  requires:
+    - {{ compiler('c') }}  # [win]
+    - {{ compiler('rust') }}  # [win]
+    - pkg-config  # [win]
   commands:
     - test -f ${PREFIX}/bin/cargo-cinstall  # [unix]
     - test -f ${PREFIX}/bin/cargo-cbuild    # [unix]

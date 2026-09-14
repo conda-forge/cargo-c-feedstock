@@ -1,4 +1,5 @@
 provider:
+  win_arm64: default
   linux_aarch64: default
   linux_ppc64le: default
 build_platform:
