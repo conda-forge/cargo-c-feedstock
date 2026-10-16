@@ -1,0 +1,11 @@
+[package]
+name = "cargo_c_smoke"
+version = "0.1.0"
+edition = "2021"
+description = "Cargo C package consumer test"
+
+[features]
+capi = []
+
+[package.metadata.capi.header]
+subdirectory = ""
