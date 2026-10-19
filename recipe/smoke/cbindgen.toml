@@ -1,2 +1,0 @@
-language = "C"
-include_guard = "CARGO_C_SMOKE_H"

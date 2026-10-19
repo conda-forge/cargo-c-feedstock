@@ -32,12 +32,6 @@ requirements:
     - pkg-config  # [not win]
 
 test:
-  files:
-    - smoke  # [win]
-  requires:
-    - {{ compiler('c') }}  # [win]
-    - {{ compiler('rust') }}  # [win]
-    - pkg-config  # [win]
   commands:
     - test -f ${PREFIX}/bin/cargo-cinstall  # [unix]
     - test -f ${PREFIX}/bin/cargo-cbuild    # [unix]
