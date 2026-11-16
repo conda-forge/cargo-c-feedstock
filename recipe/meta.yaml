@@ -1,4 +1,4 @@
-{% set version = "0.10.26" %}
+{% set version = "0.10.27" %}
 
 package:
   name: cargo-c
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/lu-zero/cargo-c/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 57700786539a322a50f1848332e3465bf15efa5af2fd8b6113f36cbfce46c830
+  sha256: a7e86a067ec395542a2345ed46a83d244a6076d280ae0c88b5ebeeced4058be6
 
 build:
-  number: 1
+  number: 0
   skip: true  # [ppc64le]
 
 requirements:
